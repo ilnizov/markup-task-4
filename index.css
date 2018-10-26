@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&subset=cyrillic');
 
-.cat-shop
-{
-    display: inline-block;
-}
-
 .cat
 {
     display: inline-block;
@@ -18,38 +13,37 @@
 .cat:hover
 {
     box-shadow: 0 0 5px rgba(0, 0, 0, .5);
-    cursor: pointer;
 }
 
 .cat-photo
 {
-    height: 144px;
+    overflow: hidden;
 }
 
 .cat-photo img 
 {
     height: 144px;
     width: 217px;
+    transition: all 1s ease-out;
+    overflow: hidden;
 }
 
-.cat-info
+.cat-photo img:hover
 {
-
-    margin: 0 0 0 10px;
+    transform: scale(1.2);
 }
 
-.cat-name h1
+.cat-name h2
 {
-    font-size: 25px;
     font-weight: 300;
-    margin: 7px 0 5px;
+    margin: 8px 10px 5px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     position: relative;
 }
 
-.cat-name h1::after 
+.cat-name h2::after 
 {
     content: '';
     position: absolute;
@@ -62,7 +56,7 @@
 
 .cat-name a
 {
-    color: black;
+    color: #000;
     text-decoration: none;
 }
 
@@ -70,16 +64,24 @@
 {
     color: #f48f42;
     text-decoration: underline;
+    cursor: pointer;
 }
 
-.cat-about p
+.cat-info p
 {
     font-size: 14px;
-    margin: 0;
+    margin: 0 0 0 10px;
     color: #717171;
 }
 
-.cat-about p:nth-child(3)
+.cat-info p:nth-child(3)
 {
-    margin: 0 0 15px;
+    margin-bottom: 10px;
+}
+
+.cat-info p:hover
+{
+    color: #000;
+    text-decoration: underline;
+    cursor: pointer;
 }
