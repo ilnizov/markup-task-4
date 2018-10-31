@@ -24,13 +24,6 @@
 {
     height: 144px;
     width: 217px;
-    transition: all 1s ease-out;
-    overflow: hidden;
-}
-
-.cat-photo img:hover
-{
-    transform: scale(1.2);
 }
 
 .cat-name h2
@@ -84,4 +77,81 @@
     color: #000;
     text-decoration: underline;
     cursor: pointer;
+}
+
+.switcher
+{
+    display: none;
+}
+
+.cat-full
+{
+    display: none;
+}
+
+.cat-full p
+{
+    font-size: 14px;
+    margin: 0 0 0 10px;
+    color: #717171;
+}
+
+.cat-full p:nth-child(3)
+{
+    margin-bottom: 10px;
+}
+
+.cat-full p:last-child:hover
+{
+    text-decoration: none;
+    cursor: default;
+    color: #717171;
+}
+
+.cat-full p:hover
+{
+    color: #000;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+input + label
+{
+    cursor: pointer;
+    margin: 0 16px;
+}
+
+input + label:hover
+{
+    color: #f48f42;
+}
+
+input:checked + label
+{
+    display: none;
+}
+
+input[value='list']:checked ~ main .cat
+{
+    display: block;
+    max-width: 500px;
+    min-width: 500px;
+    height: 400px;
+    margin: 35px auto;
+}
+
+input[value='list']:checked ~ main .cat .cat-photo img
+{
+    width: 500px;
+    height: 220px;
+}
+
+input[value='list']:checked ~ main .cat .cat-info 
+{
+    display: none;
+}
+
+input[value='list']:checked ~ main .cat .cat-full
+{
+    display: block;
 }
